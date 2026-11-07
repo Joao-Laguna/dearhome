@@ -3,7 +3,7 @@
     {
       "foto": "/img/produtos/natal-apple-pie.jpg",
       "mensagem_whatsapp": "",
-      "descricao": "Vela aromática artesanal da Coleção de Natal, com aroma de torta de maçã quente. 130 g, com tampa de madeira.",
+      "descricao": "Vela aromática artesanal da Coleção de Natal, com aroma de torta de maçã quente. 160 g, com tampa de madeira.",
       "colecao": "Coleção de Natal",
       "preco": 73,
       "mais_amada": false,
@@ -17,7 +17,7 @@
       "mensagem_whatsapp": "",
       "descricao": "Vela aromática artesanal da Coleção de Natal, inspirada no Quebra-Nozes. 160 g, com tampa de madeira.",
       "colecao": "Coleção de Natal",
-      "preco": 49.9,
+      "preco": 73,
       "mais_amada": false,
       "status": "disponivel",
       "galeria": [],
@@ -29,7 +29,7 @@
       "mensagem_whatsapp": "",
       "descricao": "Vela aromática artesanal da Coleção de Natal, com o aroma Christmas Tree. 160 g, com tampa de madeira.",
       "colecao": "Coleção de Natal",
-      "preco": 49.9,
+      "preco": 73,
       "mais_amada": false,
       "status": "disponivel",
       "galeria": [],
@@ -41,12 +41,22 @@
       "mensagem_whatsapp": "",
       "descricao": "Vela aromática artesanal da Coleção de Natal, inspirada nos biscoitos de gengibre. 160 g, com tampa de madeira.",
       "colecao": "Coleção de Natal",
-      "preco": 49.9,
+      "preco": 73,
       "mais_amada": false,
       "status": "disponivel",
       "galeria": [],
       "nome": "Christmas Candle · Gingerbread Season",
       "novo": true
+    },
+    {
+      "status": "disponivel",
+      "mais_amada": false,
+      "novo": false,
+      "nome": "Kit Christmas time",
+      "descricao": "Nosso kit com três mini velas reúne os aromas:\n- Gingerbread Season, \n- Quebra-Nozes \n- Christmas Tree \n uma combinação cheia de charme e espírito natalino.\n",
+      "preco": 85,
+      "foto": "/img/produtos/img_0638.heic",
+      "colecao": "Coleção de Natal"
     }
   ]
 }
