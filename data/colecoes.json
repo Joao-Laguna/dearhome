@@ -8,6 +8,11 @@
     {
       "nome": "Velas aromáticas",
       "descricao": "Os aromas do dia a dia"
+    },
+    {
+      "nome": "kits",
+      "descricao": "pequenos kits, grandes momentos de aconchego",
+      "imagem": "/img/produtos/img_0638.heic"
     }
   ]
 }
