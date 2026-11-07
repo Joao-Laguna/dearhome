@@ -51,7 +51,7 @@
     {
       "status": "disponivel",
       "mais_amada": false,
-      "novo": false,
+      "novo": true,
       "nome": "Kit Christmas time",
       "descricao": "Nosso kit com três mini velas reúne os aromas:\n- Gingerbread Season, \n- Quebra-Nozes \n- Christmas Tree \n uma combinação cheia de charme e espírito natalino.\n",
       "preco": 85,
