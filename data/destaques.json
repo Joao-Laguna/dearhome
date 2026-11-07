@@ -1,0 +1,36 @@
+{
+  "destaques": [
+    {
+      "etiqueta": "Novidade",
+      "titulo": "Coleção de Natal",
+      "subtitulo": "Quatro aromas para deixar a casa com cara de Natal.",
+      "imagem": "/img/produtos/natal-quebra-nozes.jpg",
+      "botao_texto": "Ver a coleção",
+      "colecao": "Coleção de Natal"
+    },
+    {
+      "etiqueta": "Lançamento",
+      "titulo": "Warm Apple Pie",
+      "subtitulo": "Aroma de torta de maçã quente, feita à mão.",
+      "imagem": "/img/produtos/natal-apple-pie.jpg",
+      "botao_texto": "Ver a coleção",
+      "colecao": "Coleção de Natal"
+    },
+    {
+      "etiqueta": "Lançamento",
+      "titulo": "Christmas Tree",
+      "subtitulo": "O cheirinho de árvore de Natal em uma vela.",
+      "imagem": "/img/produtos/natal-christmas-tree.jpg",
+      "botao_texto": "Ver a coleção",
+      "colecao": "Coleção de Natal"
+    },
+    {
+      "etiqueta": "Lançamento",
+      "titulo": "Gingerbread Season",
+      "subtitulo": "Para a temporada dos biscoitos de gengibre.",
+      "imagem": "/img/produtos/natal-gingerbread.jpg",
+      "botao_texto": "Ver a coleção",
+      "colecao": "Coleção de Natal"
+    }
+  ]
+}

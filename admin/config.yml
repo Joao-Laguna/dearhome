@@ -1,0 +1,77 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: pt
+site_url: https://dearhome.art.br
+display_url: https://dearhome.art.br
+media_folder: img/produtos
+public_folder: /img/produtos
+
+collections:
+  - name: catalogo
+    label: Catálogo
+    files:
+      - name: produtos
+        label: Produtos da loja
+        file: data/produtos.json
+        format: json
+        fields:
+          - label: Produtos
+            name: produtos
+            widget: list
+            label_singular: Produto
+            summary: "{{fields.nome}}"
+            fields:
+              - { label: "Nome do Produto", name: nome, widget: string }
+              - { label: "Coleção (aba da loja)", name: colecao, widget: relation, collection: catalogo, file: colecoes, search_fields: ["colecoes.*.nome"], display_fields: ["colecoes.*.nome"], value_field: "colecoes.*.nome" }
+              - { label: "Descrição do Produto", name: descricao, widget: text }
+              - { label: "Preço Normal (R$)", name: preco, widget: number, value_type: float, min: 0, step: 0.01 }
+              - { label: "Preço em Promoção (R$)", name: preco_promocional, widget: number, value_type: float, min: 0, step: 0.01, required: false, hint: "Deixe vazio se não estiver em promoção. Precisa ser menor que o preço normal." }
+              - label: "Status do Estoque"
+                name: status
+                widget: select
+                default: disponivel
+                options:
+                  - { label: "Estoque disponível", value: disponivel }
+                  - { label: "Poucas unidades em estoque", value: poucas }
+                  - { label: "Em Promoção", value: promocao }
+                  - { label: "Estoque grande", value: grande }
+                  - { label: "Esgotado", value: esgotado }
+              - { label: "Quantidade em Estoque", name: quantidade, widget: number, value_type: int, min: 0, required: false, hint: "Se chegar a 0, a vela aparece como esgotada automaticamente." }
+              - { label: "Foto Principal", name: foto, widget: image, required: false }
+              - { label: "Galeria de Fotos Adicionais", name: galeria, widget: list, required: false, field: { label: Foto, name: foto, widget: image } }
+              - { label: "Mensagem personalizada do WhatsApp", name: mensagem_whatsapp, widget: text, required: false, hint: "Texto que já aparece escrito quando o cliente clica em Pedir pelo WhatsApp. Se vazio, usa uma mensagem padrão." }
+              - { label: "Aparece em Mais amadas?", name: mais_amada, widget: boolean, default: false }
+              - { label: "É lançamento (novo)?", name: novo, widget: boolean, default: false }
+      - name: destaques
+        label: Carrossel de destaques (início do site)
+        file: data/destaques.json
+        format: json
+        fields:
+          - label: Destaques
+            name: destaques
+            widget: list
+            label_singular: Destaque
+            summary: "{{fields.titulo}}"
+            fields:
+              - { label: "Etiqueta (ex.: Lançamento)", name: etiqueta, widget: string, required: false }
+              - { label: "Título", name: titulo, widget: string }
+              - { label: "Subtítulo", name: subtitulo, widget: text, required: false }
+              - { label: "Imagem", name: imagem, widget: image }
+              - { label: "Texto do botão", name: botao_texto, widget: string, required: false, default: "Ver as velas" }
+              - { label: "Botão leva para a coleção", name: colecao, widget: relation, collection: catalogo, file: colecoes, search_fields: ["colecoes.*.nome"], display_fields: ["colecoes.*.nome"], value_field: "colecoes.*.nome", required: false }
+      - name: colecoes
+        label: Coleções (abas da loja)
+        file: data/colecoes.json
+        format: json
+        fields:
+          - label: Coleções
+            name: colecoes
+            widget: list
+            label_singular: Coleção
+            summary: "{{fields.nome}}"
+            fields:
+              - { label: "Nome da coleção", name: nome, widget: string, hint: "Aparece como aba no site. Só aparece se tiver pelo menos uma vela." }
+              - { label: "Frase curta", name: descricao, widget: string, required: false }
+              - { label: "Foto de capa", name: imagem, widget: image, required: false, hint: "Se vazio, usa a foto da primeira vela da coleção." }

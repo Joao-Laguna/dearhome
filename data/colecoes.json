@@ -1,0 +1,13 @@
+{
+  "colecoes": [
+    {
+      "nome": "Coleção de Natal",
+      "descricao": "Quatro aromas para acender o Natal",
+      "imagem": "/img/produtos/natal-quebra-nozes.jpg"
+    },
+    {
+      "nome": "Velas aromáticas",
+      "descricao": "Os aromas do dia a dia"
+    }
+  ]
+}
